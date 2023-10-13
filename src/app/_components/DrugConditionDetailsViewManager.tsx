@@ -14,7 +14,7 @@ import { notFound } from 'next/navigation';
 import { useAsyncList } from '@react-stately/data';
 
 import BreadcrumbsClasses from '@/app/_components/Breadcrumbs.module.css';
-import {Checkbox, Input} from '@nextui-org/react';
+import { Checkbox, Input } from '@nextui-org/react';
 import { SearchIcon } from '@/app/_components/SearchIcon';
 
 interface DrugConditionDetailsViewManagerProps {
@@ -194,10 +194,10 @@ export const DrugConditionDetailsViewManager = ({
 
   useEffect(() => {
     list.reload();
-  }, [filterValue, matchWord, matchCase]);
+  }, [filterValue, matchWord, matchCase, list.filterText]);
 
   useEffect(() => {
-    if (!isLoading) {
+    if (!list.isLoading) {
       const sortedItems = getSortedRateSources(list.items);
       if (sortedItems.length > 0) {
         const lowerBoundRate =
