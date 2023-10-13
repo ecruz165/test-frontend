@@ -1,0 +1,24 @@
+.autosuggest {
+    display: flex;
+    flex-Direction: column;
+    justify-content: center;
+    @apply w-full;
+}
+
+.itemListNot {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.itemList {
+    /*padding-top: 0.5rem;*/
+    padding: 1rem;
+}
+
+.itemList:hover {
+    cursor: pointer;
+}
+
+.activeItem {
+    background-color: #697177;
+}
